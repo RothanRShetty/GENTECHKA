@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #050817;
+  --color-brand-surface: #0A1025;
+  --color-brand-surface-card: #0F1738;
+  --color-brand-surface-glow: #131E48;
+  --color-brand-blue: #087BFF;
+  --color-brand-neon: #00C8FF;
+  --color-brand-gold: #FFC229;
+  --color-brand-purple: #5715A8;
+  --color-brand-purple-glow: #8B2CFF;
+  --color-brand-text: #F5F7FF;
+  --color-brand-muted: #9CA6C5;
+  --color-brand-problem: #FF3366;
+  --color-brand-problem-glow: #FF0055;
+
+  --font-space: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sora: 'Sora', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: #050817;
+  color: #F5F7FF;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-space {
+  font-family: var(--font-space);
+}
+
+.font-sora {
+  font-family: var(--font-sora);
+}
+
+/* Custom Cyber Grid & Ambient Background */
+.cyber-grid {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 200, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 200, 255, 0.05) 1px, transparent 1px);
+}
+
+.cyber-grid-dense {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(8, 123, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(8, 123, 255, 0.07) 1px, transparent 1px);
+}
+
+/* Neon Glow utilities */
+.glow-neon {
+  text-shadow: 0 0 10px rgba(0, 200, 255, 0.7), 0 0 25px rgba(0, 200, 255, 0.4);
+}
+
+.glow-gold {
+  text-shadow: 0 0 10px rgba(255, 194, 41, 0.6), 0 0 25px rgba(255, 194, 41, 0.3);
+}
+
+.glow-purple {
+  text-shadow: 0 0 12px rgba(139, 44, 255, 0.7), 0 0 30px rgba(87, 21, 168, 0.5);
+}
+
+.glow-box-neon {
+  box-shadow: 0 0 25px -5px rgba(0, 200, 255, 0.35), inset 0 0 15px -3px rgba(0, 200, 255, 0.15);
+}
+
+.glow-box-gold {
+  box-shadow: 0 0 25px -5px rgba(255, 194, 41, 0.35), inset 0 0 15px -3px rgba(255, 194, 41, 0.15);
+}
+
+.glow-box-problem {
+  box-shadow: 0 0 30px -5px rgba(255, 51, 102, 0.4), inset 0 0 20px -5px rgba(255, 51, 102, 0.2);
+}
+
+/* Subtle futuristic scanline overlay */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.02),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.02)
+  );
+  background-size: 100% 4px, 6px 100%;
+}
+
+/* Custom Cyber Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #050817;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00C8FF, #5715A8);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FFC229;
+}
